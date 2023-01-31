@@ -51,7 +51,7 @@ $(function () {
             if (res.status != 0) {
                 return layer.msg(res.message);
             }
-           location.href='index.html'
+            location.href = 'index.html'
             //触发去登录点击事件
         });
     })
