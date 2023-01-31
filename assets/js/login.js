@@ -30,7 +30,7 @@ $(function () {
             username: $('.reg-name').val(),
             password: $('.reg-pwd').val()
         }
-        $.post('http://www.liulongbin.top:3007/api/reguser', data, function (res) {
+        $.post('/api/reguser', data, function (res) {
             // console.log(res);
             if (res.status != 0) {
                 return layer.msg(res.message);
@@ -46,7 +46,7 @@ $(function () {
         //发起 ajax请求
         var data = $(this).serialize()
         console.log(data);
-        $.post('http://www.liulongbin.top:3007/api/login', data, function (res) {
+        $.post('/api/login', data, function (res) {
             // console.log(res);
             if (res.status != 0) {
                 return layer.msg(res.message);
