@@ -2,26 +2,26 @@
 $(function () {
 
     var layer = layui.layer;
-    getUserInfo()
-    function getUserInfo() {
-        $.ajax({
-            method: 'GET',
-            url: '/my/userinfo',
-            // beforeSend: function (request) {
-            //     console.log(request);
-            //     var token = localStorage.getItem('token');
-            //     request.setRequestHeader('Authorization', token);
-            // },
-            success: function (res) {
-                console.log(res);
-                if (res.status != 0) {
-                    return layer.msg(res.message);
-                }
-                renderAvatar(res.data);
+
+  
+
+})
+getUserInfo()
+function getUserInfo() {
+    $.ajax({
+        method: 'GET',
+        url: '/my/userinfo',
+
+        success: function (res) {
+            console.log(res);
+            if (res.status != 0) {
+                return layer.msg(res.message);
             }
-            //不论成功或失败 都会进来
-        })
-    }
+            renderAvatar(res.data);
+        }
+        //不论成功或失败 都会进来
+    })
+}
     //渲染用户信息
     function renderAvatar(user) {
         //判断用户名用哪个
@@ -46,4 +46,3 @@ $(function () {
                 location.href='login.html'
               });
         })
-})

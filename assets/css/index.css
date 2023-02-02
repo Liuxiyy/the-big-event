@@ -10,6 +10,9 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+body {
+  background: #f2f2f2;
+}
 .userAvatar {
   display: inline-block;
   width: 30px;
